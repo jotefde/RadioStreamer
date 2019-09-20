@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using RadioStreamer.Core.Services;
@@ -16,11 +17,12 @@ namespace RadioStreamer
             do
             {
             } while (!prepared.IsCompleted);
-            foreach (Station station in service.GetStations())
+            /*List<Station> stations = service.GetStations();
+            foreach (Station station in stations)
             {
-                //Console.WriteLine(station.Name + ": " + station.ToString() + " : " + station.parent.ToString());
-            }
-            Thread.Sleep(2000);
+                Console.WriteLine(station.Name);
+            }*/
+            //stations[0].GetPlaylist();
         }
     }
 }

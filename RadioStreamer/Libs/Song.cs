@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RadioStreamer.Libs
 {
-
+    public class Playlist : List<Song> { };
     public class Song
     {
         public String Title { get; set; }
@@ -29,6 +29,11 @@ namespace RadioStreamer.Libs
             BigCoverUrl = bcoverUrl;
             Uptime = uptime;
             Timestamp = ts;
+        }
+
+        public override string ToString()
+        {
+            return Author + " | " + Title + " | " + Timestamp.ToString();
         }
 
     }
